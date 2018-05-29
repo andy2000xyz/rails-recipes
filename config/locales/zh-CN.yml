@@ -1,4 +1,4 @@
-"zh-CN":
+zh-CN:
   event_list: 活动列表
   hello: "亲～ %{name} 你好："
 
@@ -320,6 +320,6 @@
       not_saved:
         one: "发生 1 个错误，导致%{resource}保存失败："
         other: "发生 %{count} 个错误，导致%{resource}保存失败："
-        
+
   admin:
     event_list: 活动列表管理
