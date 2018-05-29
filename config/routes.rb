@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     resources :events
   end
 
+  get "/faq" => "pages#faq"
+  
   root "events#index"
 
 end
