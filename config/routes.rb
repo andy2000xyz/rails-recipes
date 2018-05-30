@@ -10,7 +10,9 @@ Rails.application.routes.draw do
     root "events#index"
     resources :events
     resources :categories
-    resources :users
+    resources :users do
+      resource :profile, :controller => "user_profiles"
+    end
   end
 
   get "/faq" => "pages#faq"
