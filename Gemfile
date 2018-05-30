@@ -39,7 +39,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'awesome_rails_console'
 gem "rails-i18n"
 gem "devise-i18n"
-
+gem "select2-rails"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
