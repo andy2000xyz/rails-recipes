@@ -8,6 +8,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  accepts_nested_attributes_for :profile
+
   def display_name
     self.email.split("@").first
   end
