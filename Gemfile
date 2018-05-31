@@ -45,6 +45,7 @@ gem 'bootstrap-datepicker-rails'
 gem 'ckeditor'
 gem 'ranked-model'
 gem 'jquery-ui-rails'
+gem 'kaminari'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
