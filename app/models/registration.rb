@@ -7,12 +7,16 @@ class Registration < ApplicationRecord
     validates_presence_of :name, :email, :cellphone, :bio, :if => :should_validate_all_data?
   # Rails 可以根据条件来做表单验证，叫做 Conditional Validations。我们需要根据用户实际在做哪一步，来决定要启用哪些验证。
   validate :check_event_status, :on => :create
-  
+
   belongs_to :event
   belongs_to :ticket
   belongs_to :user, :optional => true
 
   before_validation :generate_uuid, :on => :create
+
+  scope :by_status, ->(s){ where( :status => s ) }
+  scope :by_ticket, ->(t){ where( :ticket_id => t ) }
+  # scope 的作用是将常用的查询条件宣告起来，方便重复使用
 
   def to_param
     self.uuid
