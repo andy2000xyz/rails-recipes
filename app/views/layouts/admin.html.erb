@@ -26,6 +26,8 @@
             <% if current_user %>
               <li class="active"><%= link_to('活動管理', admin_events_path) %></li>
               <li><%= link_to('用户管理', admin_users_path) %></li>
+              <li><%= link_to('编修记录管理', admin_versions_path) %></li>
+
             <% end %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
