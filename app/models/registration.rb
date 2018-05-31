@@ -18,6 +18,8 @@ class Registration < ApplicationRecord
   scope :by_ticket, ->(t){ where( :ticket_id => t ) }
   # scope 的作用是将常用的查询条件宣告起来，方便重复使用
 
+  has_paper_trail
+
   def to_param
     self.uuid
   end
