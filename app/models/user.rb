@@ -17,4 +17,14 @@ class User < ApplicationRecord
     self.email.split("@").first
   end
 
+  def is_admin?
+    self.role == "admin"
+  end
+
+  def is_editor?
+    ["admin", "editor"].include?(self.role)  # 如果是 admin 的话，当然也有 editor 的权限
+  end
+
 end
+
+  # 透过 User model 的 is_admin? 和 is_editor? 方法集中权限检查的逻辑，之后如果新增不同子权限，只要改 model 就可以了。
