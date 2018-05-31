@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+
+  ROLES = ["admin", "editor"]
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   has_one :profile
