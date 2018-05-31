@@ -1,4 +1,6 @@
 class Event < ApplicationRecord
+  mount_uploader :logo, EventLogoUploader
+  
   include RankedModel
   ranks :row_order
   belongs_to :category, :optional => true
