@@ -50,6 +50,7 @@ gem 'ransack'
 gem 'paper_trail'
 gem 'carrierwave'
 gem "mini_magick"
+gem 'premailer-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
