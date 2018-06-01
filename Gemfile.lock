@@ -38,6 +38,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
     arel (7.1.4)
     autoprefixer-rails (6.7.6)
       execjs
@@ -119,6 +121,10 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    letter_opener (1.6.0)
+      launchy (~> 2.2)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -159,6 +165,7 @@ GEM
     pry-stack_explorer (0.4.9.2)
       binding_of_caller (>= 0.7)
       pry (>= 0.9.11)
+    public_suffix (3.0.2)
     puma (3.8.2)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -289,6 +296,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   kaminari
+  letter_opener
   listen (~> 3.0.5)
   mini_magick
   nested_form_fields
