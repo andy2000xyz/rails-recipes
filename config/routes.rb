@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :events do
+
     resources :registrations do
       member do
         get "steps/1" => "registrations#step1", :as => :step1
@@ -23,6 +24,7 @@ Rails.application.routes.draw do
       post :undo
     end
     resources :events do
+      resources :registration_imports
       resources :registrations, :controller => "event_registrations" do
         collection do
           post :import

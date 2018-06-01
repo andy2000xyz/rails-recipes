@@ -11,6 +11,7 @@ class Event < ApplicationRecord
     # 某些版本的Rails 有个accepts_nested_attributes_for 的bug 让has_many 故障了，需要额外补上inverse_of 参数，不然存储时会找不到tickets
 
   has_many :attachments, :class_name => "EventAttachment", :dependent => :destroy
+  has_many :registration_imports, :dependent => :destroy
   accepts_nested_attributes_for :attachments, :allow_destroy => true, :reject_if => :all_blank
   accepts_nested_attributes_for :tickets, :allow_destroy => true, :reject_if => :all_blank
 
