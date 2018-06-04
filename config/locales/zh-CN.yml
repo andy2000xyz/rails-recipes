@@ -12,6 +12,7 @@ zh-CN:
     status:
       pending: 报名尚未完成
       confirmed: 报名成功
+      cancalled: 报名已取消
 
   bulk_update: 批次编辑
   bulk_delete: 批次删除
